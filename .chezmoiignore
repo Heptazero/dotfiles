@@ -2,3 +2,15 @@
 # 这里只是加密备份进 git 留档(disaster recovery),绝不能被 apply 写回,
 # 否则会用旧快照覆盖掉当前正在运行的真实配置。
 Library/Application Support/Zotero/Profiles/ojzebmg4.default/prefs.js
+
+{{- if ne .chezmoi.os "darwin" }}
+Library/**
+.config/fish/**
+{{- end }}
+
+{{- if ne .chezmoi.os "windows" }}
+Documents/**
+AppData/**
+mytheme.omp.json
+{{- end }}
+

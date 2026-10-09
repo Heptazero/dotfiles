@@ -1,0 +1,60 @@
+{
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredLightColorTheme": "Monokai",
+    "security.workspace.trust.untrustedFiles": "open",
+    "security.allowedUNCHosts": [
+        "wsl.localhost"
+    ],
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash",
+            "icon": "terminal-git-bash"
+        },
+        "Ubuntu-24.04 (WSL)": {
+            "path": "C:\\Windows\\System32\\wsl.exe",
+            "args": [
+                "-d",
+                "Ubuntu-24.04"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    //编译后的二进制
+    "code-runner.executorMap": {
+        "cpp": "mkdir -p build && g++ '$fileName' -o 'build/$fileNameWithoutExt' && './build/$fileNameWithoutExt'"
+    },
+    "code-runner.fileDirectoryAsCwd": true,
+    "extensions.ignoreRecommendations": true,
+    "geminicodeassist.project": "plasma-shine-q6cx0",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "editor.mouseWheelZoom": true,
+    "editor.colorDecorators": true,
+    "rsp-ui.enableStartServerOnActivation": [
+        {
+            "id": "redhat.vscode-community-server-connector",
+            "name": "Community Server Connector",
+            "startOnActivation": true
+        }
+    ],
+    "geminicodeassist.inlineSuggestions.enableAuto": false,
+    "java.server.launchMode": "LightWeight",
+    "remote.autoForwardPortsSource": "hybrid",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "sql": false
+    }
+}
